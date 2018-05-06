@@ -2,7 +2,8 @@
 layout: "post"
 title: "Intro to Data Streaming: The Problem with Batch ETL, Part 2  "
 date: 2017-08-08 20:00:00 -0700
-categories: Data Architecture  
+categories: -Data Architecture
+permalink: "/blog/:title"
 ---  
 
 
