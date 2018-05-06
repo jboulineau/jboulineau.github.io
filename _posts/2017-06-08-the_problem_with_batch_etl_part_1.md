@@ -1,9 +1,8 @@
 ---
-layout: post
+layout: "post"
 title: "Intro to Data Streaming: The Problem with Batch ETL, Part 1"
-date: 2017-06-08 20:00:00
+date: 2017-06-08 20:00:00 -0700
 categories: Data Architecture  
-permalink: /blog/the_problem_with_batch_etl_part_1.html 
 ---
 
 >Batch processing has a long and storied history with deep roots in the early days of computing. There was a time when it was a necessity due to limitations of hardware relative to workloads. In the age of Business Intelligence, ETL (Extract, Transform, and Load) inherited the pattern for many of the same reasons. Times have changed. The first part of this series will cover some of the limitations that impact the quality of Business Intelligence. These flaws have existed since decision support became a growing concern decades ago, but severity has increased in tandem with the criticality of Business Intelligence. The second part in the series will address changes in architecture that will create more difficulties. 
