@@ -6,19 +6,14 @@ categories: -Data Architecture
 permalink: "/blog/:title"
 ---  
 
-
->The first part of the series covered innate problems with batch ETL, such as catastrophic failure and data loss. This post covers how changes in application architecture are making batch ETL obsolete. As will be shown, architecture assumptions upon which ETL has relied are no longer dependable. Data Engineers and Architects should understand new development in application design patterns and adapt.
-
----
-
-
 **Intro to Data Streaming Series**
-1. [The Problem with Batch ETL, Part 1](https://rivulet.io/2017/06/08/the_problem_with_batch_etl_part_1/)
-2. [The Problem with Batch ETL, Part 2](https://rivulet.io/2017/08/02/the_problem_with_batch_etl_part_2/)
-3. [A Basic Real-Time ETL Application]()
+1. [The Problem with Batch ETL, Part 1](/blog/the_problem_with_batch_etl_part_1)
+2. [The Problem with Batch ETL, Part 2](/blog/the_problem_with_batch_etl_part_2)
+3. [A Simple Real-Time ETL Application](/blog/a_simple_real-time_app)
 4. [Improving the Real-Time ETL Application]()
 5. [Lambda Architecture]()
-6. [Kappa Architecture] ()
+6. [Kappa Architecture]()
+7. [Learning Resources](/blog/streaming_learning_resources)
 
 For many years, application architecture consisted of some reliable constants upon which ETL and Business Intelligence in general relied upon. Early on, having windows of 6-12 hours in which few changes to source systems were made and transactional application servers were idle was not uncommon. That has largely changed across the board except for the smallest of regional or local companies. That data would be stored in a relational database system that was exposed by the ubiquitous SQL + ODBC combination was, also, a given. Core applications were complicated monoliths with a relatively few number of satellite applications that had data relevant for analytics. We have, at ever increasing velocity, seen these and other architecture stalwarts begin to disappear. 
 

@@ -5,6 +5,15 @@ categories: "Data Architecture"
 permalink: "/blog/:title"
 ---
 
+**Intro to Data Streaming Series**
+1. [The Problem with Batch ETL, Part 1](/blog/the_problem_with_batch_etl_part_1)
+2. [The Problem with Batch ETL, Part 2](/blog/the_problem_with_batch_etl_part_2)
+3. [A Simple Real-Time ETL Application](/blog/a_simple_real-time_app)
+4. [Improving the Real-Time ETL Application]()
+5. [Lambda Architecture]()
+6. [Kappa Architecture]()
+7. [Learning Resources](/blog/streaming_learning_resources)
+
 During a presentation at the [Nashville BI user group](https://www.meetup.com/NashBI/), I was asked to provide more material on getting started with data streaming. I'll cover some of these in other 'Intro to Data Streaming' posts, but I promised the group a blog post on the subject, and here it is. There is a ton of material out there, but it will get you started. Also for the attendees of the meeting, here is the [deck I used](https://rivuletio.files.wordpress.com/2017/10/real_time_etl.pptx). 
 
 [The Log: What every software engineer should know about real-time data's unifying abstraction](https://goo.gl/j6mqP6)  

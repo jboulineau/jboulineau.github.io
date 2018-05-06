@@ -7,12 +7,13 @@ permalink: "/blog/:title"
 ---
 
 **Intro to Data Streaming Series**
-1. [The Problem with Batch ETL, Part 1](https://rivulet.io/2017/06/08/the_problem_with_batch_etl_part_1/)
-2. [The Problem with Batch ETL, Part 2](https://rivulet.io/2017/08/02/the_problem_with_batch_etl_part_2/)
-3. [A Basic Real-Time ETL Application]()
+1. [The Problem with Batch ETL, Part 1](/blog/the_problem_with_batch_etl_part_1)
+2. [The Problem with Batch ETL, Part 2](/blog/the_problem_with_batch_etl_part_2)
+3. [A Simple Real-Time ETL Application](/blog/a_simple_real-time_app)
 4. [Improving the Real-Time ETL Application]()
 5. [Lambda Architecture]()
 6. [Kappa Architecture]()
+7. [Learning Resources](/blog/streaming_learning_resources)
 
 Chances are, batch ETL is the majority, or perhaps the exclusive, solution for data engineering underlying Business Intelligence in your enterprise. There are good reasons for this. Batch ETL has a legion of engineers trained in its patterns. It is politically non-controversial. There are many established tools backed by major, executive and compliance approved, corporations. While far from simple, it does eliminate some complexities such as isolation from other processes and partially removing contention with other workloads. It is also the approach that most caters to the highest performance write operations of relational database management systems by loading large quantities of data at one time, rather than in separate transactions. Unfortunately, because it has been the default choice for so long, most enterprises have become complacent about its limitations. It is time to take a hard look at this venerable practice. Consider the following problems:
 
