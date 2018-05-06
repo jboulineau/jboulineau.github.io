@@ -1,0 +1,48 @@
+---  
+layout: "post"
+title: "Intro to Data Streaming: The Problem with Batch ETL, Part 2  "
+date: 2017-08-08 20:00:00 -0700
+categories: Data Architecture  
+---  
+
+
+>The first part of the series covered innate problems with batch ETL, such as catastrophic failure and data loss. This post covers how changes in application architecture are making batch ETL obsolete. As will be shown, architecture assumptions upon which ETL has relied are no longer dependable. Data Engineers and Architects should understand new development in application design patterns and adapt.
+
+---
+
+
+**Intro to Data Streaming Series**
+1. [The Problem with Batch ETL, Part 1](https://rivulet.io/2017/06/08/the_problem_with_batch_etl_part_1/)
+2. [The Problem with Batch ETL, Part 2](https://rivulet.io/2017/08/02/the_problem_with_batch_etl_part_2/)
+3. [A Basic Real-Time ETL Application]()
+4. [Improving the Real-Time ETL Application]()
+5. [Lambda Architecture]()
+6. [Kappa Architecture] ()
+
+For many years, application architecture consisted of some reliable constants upon which ETL and Business Intelligence in general relied upon. Early on, having windows of 6-12 hours in which few changes to source systems were made and transactional application servers were idle was not uncommon. That has largely changed across the board except for the smallest of regional or local companies. That data would be stored in a relational database system that was exposed by the ubiquitous SQL + ODBC combination was, also, a given. Core applications were complicated monoliths with a relatively few number of satellite applications that had data relevant for analytics. We have, at ever increasing velocity, seen these and other architecture stalwarts begin to disappear. 
+
+### Distributed Microservices
+
+For some time now, the giant core applications that have faithfully run business operations for decades have been falling out of favor with application developers. These 'monoliths' tend to have all of the characteristics that impede development teams in meeting the demands of modern organizations that expect their solutions to be as adaptable as the modern business. It is now, more than ever, true that businesses that cannot adapt, die, as the competitive landscape becomes more and more dependent upon cutting edge technology. Monoliths are difficult to change, deploy, troubleshoot, and operate. As a result, many believe that the pragmatic choice is to break these applications up into component parts, or services, that are as small as practical. Developers, therefore, now want to conceive of a solution as a collection of autonomous microservices which hide as much behind APIs as possible to maximize decoupling. Of course, architecture is the art of selecting your tradeoffs. Microservice patterns shift complexity to Business Intelligence. While it makes plenty of sense to split functionality and data apart for application development teams, analytics needs the data *together*. 
+
+For a data engineer, now, rather than a few large core applications and their associated relational databases, I now have many small applications, each with a small slice of the data that I need. Not only that, but application teams will now resist more than ever the idea of directly connecting (coupling) to their data stores. This complicates their ability to change quickly because they now have to worry about breaking this tightly coupled process they don't control. The expectation is that any direct integration should be done through their exposed API, which likely will not have a *get all data* endpoint, nor necessarily even make all persisted attributes available. This is further complicated by the reality of ...
+
+### Polyglot Persistence​
+
+Gone are the days where all of the data in your organization is stored in a relational database. Even if you are able to negotiate a direct connection to microservice data stores, it's growing increasingly likely that you won't be dealing with a relational database. It is equally as likely that this vital data is persisted in any number of key-value, columnar, or document data stores. It is also more true than ever that in order to understand the data in those data stores you will need to read the code, since schema is now defined by an object model rather than the familiar schema conventions of the relational database. Additionally, since you cannot rely on the well=known rules of the 3NF database, it is necessary to consider de-duplication of data spread across documents and reconciling schema differences between documents or evolving column sets, for example. Thus, even those ETL tools which have the capability of reading from NoSQL stores only solve part of this problem. Of course, the application developer would argue, you should just be using the API.
+
+### Event Driven Architecture​
+
+As applications are split into microservices, there remains the need to communicate. Point-to-point communication is undesirable as it is another form of coupling, the greatest evil in the microservice architecture. However, if a microservice was to, in the event of something interesting occurring within it's context, notify all the other services of that occurrence through the use of an intermediary responsible for abstracting any changes to the source from the consumers, then integration without coupling could be achieved. 'Event-driven' is the term used to describe the architecture in which autonomous services interact with each other via publishing and subscribing to these notifications. For example, a user provisioning service, upon completing the creation of a new employee's account, would publish an event containing the data about the new user to a queue. The payroll service, a subscriber to the queue, would receive this event and automatically execute code to initiate the creation of pay-cycles. Another subscriber, a building access service, would receive the event and issue a new ID card based on the location of the new employee that was entered into the provisioning service and shared in the event. 
+
+This has third impacts for the data engineer. First, it introduces yet another source of highly variant data (i.e. potentially as many queues as there are events in your organization). Second, it creates the expectation of real-time integration. If two separate services are able to communicate in real-time and have changes in one service reflect in another, why cant the same occur in Business Intelligence? Finally, my processes have to be able to subscribe to the same queues as other applications, as these messages are often not persisted and guaranteed to be available during batch cycles.
+
+### Shrinking batch windows
+
+The dangers of putting transactional application databases under heavy load are well known and it is often true that ETL processes are the most intensive users of these databases. In the past, this has not been an issue because ETL processes were scheduled to run in the off-hours for a business. It is, however, increasingly true that there are no off-hours for a business. Now, rather than being a wise use of resources to concentrate the heavy query activity of an ETL process into processing windows, it has become irresponsible and dangerous in our 24/7 world of international business and 'round-the-clock activity, even if we have access to the underlying data stores. It is true that you can continue to work around this by implementing expensive read-only replicas or restore copies of databases, if they are not exceedingly large. Yet, given the current direction of application architecture, these techniques will prove to be only stop-gap measures.
+
+### Summary
+
+It is clear, then, that the direction of modern application architecture and the requirements of the modern business are making the traditional methods of batch ETL increasingly infeasible. Traditional ETL tools and practices depend greatly on these once reliable patterns that simply cannot be counted upon to be standard any longer. We data engineers and data architects must adapt and develop new techniques that work within an application architecture that is increasingly prohibiting our tried-and-true batch methods. What, then, is to be done? Read on ... 
+
+Part 3 of the series will begin looking at what implementing real-time ETL might look like as we build up to a holistic view of the new world of data engineering.
