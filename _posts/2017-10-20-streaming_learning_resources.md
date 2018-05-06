@@ -2,11 +2,7 @@
 title: "Intro to Data Streaming: Learning Resources"
 date: 2017-10-20 20:00:00 -0700
 categories: "Data Architecture"
-permalink: "/blog/"
----
-  
-> Data Streaming is a big subject that can seem intimidating. But, there are some ways places to start. This post covers some of the canonical material that will set future learning on a firm foundation. 
-
+permalink: "/blog/:title"
 ---
 
 During a presentation at the [Nashville BI user group](https://www.meetup.com/NashBI/), I was asked to provide more material on getting started with data streaming. I'll cover some of these in other 'Intro to Data Streaming' posts, but I promised the group a blog post on the subject, and here it is. There is a ton of material out there, but it will get you started. Also for the attendees of the meeting, here is the [deck I used](https://rivuletio.files.wordpress.com/2017/10/real_time_etl.pptx). 

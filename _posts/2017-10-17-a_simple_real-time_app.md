@@ -1,21 +1,19 @@
 ---
 layout: post
-tite: "Intro to Data Streaming: A Simple Real-Time App"
+title: "Intro to Data Streaming: A Simple Real-Time App"
 date:  2017-12-17 20:00:00 
 categories: "Data Architecture"
-permalink: "/blog/:title"
+permalink: "/blog/a_simple_real-time_app"
 ---
 
->The previous posts in this series covered the challenges to traditional batch ETL as a result of innate problems and changes in application architecture. In the next two posts a 'from scratch' real-time ETL application will be reviewed, starting simple and incrementally adding sophistication to demonstrate the principles underlying emerging approaches to data engineering. This post covers the most basic real-time (or near-real-time, application).
-
----
-
+**Intro to Data Streaming Series**
 1. [The Problem with Batch ETL, Part 1](/blog/the_problem_with_batch_etl_part_1/)
 2. [The Problem with Batch ETL, Part 2](/blog/the_problem_with_batch_etl_part_2/)
-3. [A Basic Real-Time ETL Application](/blog/a-simple-real-time-app/)
+3. [A Simple Real-Time ETL Application](/blog/a_simple_real-time_app)
 4. [Improving the Real-Time ETL Application]()
 5. [Lambda Architecture]()
 6. [Kappa Architecture]()
+7. [Learning Resources]()
 
 To refresh from parts [1](/blog/the_problem_with_batch_etl_part_1/) and [2](/blog/the_problem_with_batch_etl_part_2/), the shortcomings of batch ETL include:
 
