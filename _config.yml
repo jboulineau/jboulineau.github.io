@@ -15,8 +15,8 @@
 # in the templates via {{ site.myvariable }}.
 title: Jon Boulineau
 #email: jboulineau@gmail.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Jon Boulineau
+#description: >- # this means to ignore newlines until "baseurl:"
+#  Jon Boulineau
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://jboulineau.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jboulineau
