@@ -28,7 +28,7 @@ theme: minima
 plugins:
   - jekyll-feed
 
-show_excerpts: false
+show_excerpts: true
 
 collections:
   posts:
@@ -43,6 +43,7 @@ collections:
       path: "" # change to scope the values to a folder
     values:
       author: "Jon Boulineau"
+      excerpt_separator: <!--more-->
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

@@ -5,9 +5,10 @@ date: 2017-10-20 20:00:00 -0700
 categories: "Architecture"
 ---
 
-{% include TOC_intro_data_streaming.md %}
 
-During a presentation at the [Nashville BI user group](https://www.meetup.com/NashBI/), I was asked to provide more material on getting started with data streaming. I'll cover some of these in other 'Intro to Data Streaming' posts, but I promised the group a blog post on the subject, and here it is. There is a ton of material out there, but it will get you started. Also for the attendees of the meeting, here is the [deck I used](https://rivuletio.files.wordpress.com/2017/10/real_time_etl.pptx). 
+During a presentation at the [Nashville BI user group](https://www.meetup.com/NashBI/), I was asked to provide more material on getting started with data streaming. I'll cover some of these in other 'Intro to Data Streaming' posts, but I promised the group a blog post on the subject, and here it is. There is a ton of material out there, but it will get you started. <!--more--> 
+
+Also for the attendees of the meeting, here is the [deck I used](https://rivuletio.files.wordpress.com/2017/10/real_time_etl.pptx).
 
 [The Log: What every software engineer should know about real-time data's unifying abstraction](https://goo.gl/j6mqP6)  
 
@@ -35,3 +36,7 @@ Jay Kreps' response to Marz is becoming as influential as his 'The Log' post. In
 [The World Beyond Batch: Streaming 102](https://www.oreilly.com/ideas/the-world-beyond-batch-streaming-102)  
 
 Tyler Akidau works on the Google Millwheel team. In these O'Reilly (another great resource) posts he expounds upon streaming from a different perspective from the above. He writes about computational matters, especially various aspects of dealing with time. This is a very good view into how streaming architecture not only reaches parity with batch, but surpasses it in capabilities. Reading the [Millwheel VLDB paper](https://research.google.com/pubs/pub41378.html), if you're up for it, is a deep dive.
+
+---
+
+{% include TOC_intro_data_streaming.md %}

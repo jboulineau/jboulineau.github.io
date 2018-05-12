@@ -5,9 +5,9 @@ date:  2017-12-17 20:00:00
 categories: "Architecture"
 ---
 
-{% include TOC_intro_data_streaming.md %}
+To illustrate the principles of data streaming, it's helpful to start simple by envisioning what a simple application that would achieve real-time ETL capabilities would look like. <!--more--> But first a review. 
 
-To refresh from parts [1](/blog/the_problem_with_batch_etl_part_1/) and [2](/blog/the_problem_with_batch_etl_part_2/), the shortcomings of batch ETL include:
+To refresh from parts [1]({% post_url 2017-06-08-the_problem_with_batch_etl_part_1 %}) and [2]({% post_url 2017-08-08-the_problem_with_batch_etl_part_2 %}), the shortcomings of batch ETL include:
 
 + **Catastrophic failure**: Because we are dealing with many hours worth of data in batch loads, a failure due to a single record out of millions can cause long-running jobs to fail completely, resulting in long recovery times.
 + **Tool Complexity**: Limitations of traditional ETL tools often lead to hundreds or thousands of packages and stored procedures with little attention to standard development principles like code reuse.
@@ -110,3 +110,7 @@ We're part of the way there, but we're not done yet. In the next post we'll try 
 ---
 
 1 - If you're here, you're really interested in the answer to the temporal inaccuracies question. The reason why temporal inaccuracies are worse in a microbatch scenario is that you're now running ETL during times of day when transactional applications are most volatile. Because we're usually working with processing time and not event time (unless you're lucky enough to have data sources that track event time), we're still relating data based on the time it is extracted, not the time it is inserted/updated (which is still not necessarily accurate, but that's a story for another post).
+
+---
+
+{% include TOC_intro_data_streaming.md %}

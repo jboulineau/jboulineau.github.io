@@ -5,9 +5,7 @@ date: 2017-08-08 20:00:00 -0700
 categories: "Architecture"
 ---  
 
-{% include TOC_intro_data_streaming.md %}
-
-For many years, application architecture consisted of some reliable constants upon which ETL and Business Intelligence in general relied upon. Early on, having windows of 6-12 hours in which few changes to source systems were made and transactional application servers were idle was not uncommon. That has largely changed across the board except for the smallest of regional or local companies. That data would be stored in a relational database system that was exposed by the ubiquitous SQL + ODBC combination was, also, a given. Core applications were complicated monoliths with a relatively few number of satellite applications that had data relevant for analytics. We have, at ever increasing velocity, seen these and other architecture stalwarts begin to disappear. 
+For many years, application architecture consisted of some reliable constants upon which ETL and Business Intelligence in general relied upon. Early on, having windows of 6-12 hours in which few changes to source systems were made and transactional application servers were idle was not uncommon. That has largely changed across the board except for the smallest of regional or local companies. That data would be stored in a relational database system that was exposed by the ubiquitous SQL + ODBC combination was, also, a given. Core applications were complicated monoliths with a relatively few number of satellite applications that had data relevant for analytics. We have, at ever increasing velocity, seen these and other architecture stalwarts begin to disappear. <!--more-->
 
 ### Distributed Microservices
 
@@ -34,3 +32,7 @@ The dangers of putting transactional application databases under heavy load are 
 It is clear, then, that the direction of modern application architecture and the requirements of the modern business are making the traditional methods of batch ETL increasingly infeasible. Traditional ETL tools and practices depend greatly on these once reliable patterns that simply cannot be counted upon to be standard any longer. We data engineers and data architects must adapt and develop new techniques that work within an application architecture that is increasingly prohibiting our tried-and-true batch methods. What, then, is to be done? Read on ... 
 
 Part 3 of the series will begin looking at what implementing real-time ETL might look like as we build up to a holistic view of the new world of data engineering.
+
+---
+
+{% include TOC_intro_data_streaming.md %}
