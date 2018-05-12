@@ -28,6 +28,22 @@ theme: minima
 plugins:
   - jekyll-feed
 
+show_excerpts: false
+
+collections:
+  posts:
+    output: true
+    permalink: "/blog/:categories/:title"
+  category:
+    output: true
+  
+  defaults:
+  -
+    scope:
+      path: "" # change to scope the values to a folder
+    values:
+      author: "Jon Boulineau"
+
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.

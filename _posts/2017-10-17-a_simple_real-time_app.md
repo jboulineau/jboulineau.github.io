@@ -2,18 +2,10 @@
 layout: post
 title: "Intro to Data Streaming: A Simple Real-Time App"
 date:  2017-12-17 20:00:00 
-categories: "Data Architecture"
-permalink: "/blog/a_simple_real-time_app"
+categories: "Architecture"
 ---
 
-**Intro to Data Streaming Series**
-1. [The Problem with Batch ETL, Part 1](/blog/the_problem_with_batch_etl_part_1)
-2. [The Problem with Batch ETL, Part 2](/blog/the_problem_with_batch_etl_part_2)
-3. [A Simple Real-Time ETL Application](/blog/a_simple_real-time_app)
-4. [Improving the Real-Time ETL Application]()
-5. [Lambda Architecture]()
-6. [Kappa Architecture]()
-7. [Learning Resources](/blog/streaming_learning_resources)
+{% include TOC_intro_data_streaming.md %}
 
 To refresh from parts [1](/blog/the_problem_with_batch_etl_part_1/) and [2](/blog/the_problem_with_batch_etl_part_2/), the shortcomings of batch ETL include:
 

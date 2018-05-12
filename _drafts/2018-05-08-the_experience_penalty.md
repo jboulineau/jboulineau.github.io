@@ -1,5 +1,6 @@
 ---
+layout: post
 title: "The Experience Penalty"
-date:
-categories:
 ---
+
+Test
