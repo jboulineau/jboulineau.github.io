@@ -28,6 +28,9 @@ theme: minima
 plugins:
   - jekyll-feed
 
+# Allow pages to live in their own directory
+include: ["_pages"]
+
 show_excerpts: true
 
 collections:

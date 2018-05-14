@@ -102,7 +102,7 @@ For applications developed for modern architectures, a message queue allows for 
 
 With this architectural change, we've accomplished quite a bit:
 
-+ **Temporal Inaccuracies**: We now have access to event time since CDC timestamps changes as do message queues. 
++ **Temporal Inaccuracies, Lossy**: We now have access to event time since CDC timestamps changes as do message queues. We can now use event time to integrate data across applications rather than processing time, thus greatly improving accuracy. We are also capturing all changes to data, not just taking a snapshot. 
 + **Distributed MicroServices, Polyglot Persistence, Event-Driven Architecture**: In this architecture we are now down a revolutionary path. We are, as data engineers, moving towards no longer being in the position of cobbling together data as an afterthought (the classic challenge of ETL and BI), but rather participate as first class citizens in *application architecure.* Reading data from a message queue to which applications are publishing their data, just like any other application, allows us to avoid the pain of trying to extract all this data from variant data stores and dozens of services. It also means that our analytics temporal capabilities are on par with application capabilities because we are able to consume events at the same time as those applications. We are closing the divide. We don't care which persistency store is used, nor how many services there are, because we simply have to interact with a well-defined set of queues, a single protocol, and a single format (most commonly JSON).
 
 We're part of the way there, but we're not done yet. In the next post we'll try to solve the thorny issues of **statefull algorithms** and **reprocessing**.

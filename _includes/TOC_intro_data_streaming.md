@@ -1,4 +1,4 @@
-
+  
 **Introduction to Data Streaming Series**
 1. [The Problem with Batch ETL, Part 1]({% post_url 2017-06-08-the_problem_with_batch_etl_part_1 %})
 2. [The Problem with Batch ETL, Part 2]({% post_url 2017-08-08-the_problem_with_batch_etl_part_2 %})
@@ -7,3 +7,4 @@
 5. [Lambda Architecture]
 6. [Kappa Architecture]
 7. [Learning Resources]({% post_url 2017-10-20-streaming_learning_resources %})
+  

@@ -40,4 +40,5 @@ This example may or may not be a serious issue in your organization, but conside
 Part 2 of this series will continue to look at the limitations of batch ETL in the context of modern application architectures. 
 
 ---
+
 {% include TOC_intro_data_streaming.md %}
