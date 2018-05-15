@@ -1,0 +1,28 @@
+---
+# This layout allows the presentation of a category index, a page listing all posts for a particular category. 
+# Without these pages, navigating to site/[category_name] results in a file listing.
+# In order to enable a category index a .html file must be created in the _category directory with the following front matter
+# layout: category, tag: [category_name], permalink: [/category_name/]
+
+layout: default
+---
+
+<ul class="blog list">
+    
+    <h2>Filed Under <small>#{{ page.tag }}</small></h2>
+
+    {% for post in site.categories[page.tag] %}
+    <li>
+      {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+      <span class="post-meta">{{ post.date | date: date_format }}</span>
+      <h3>
+        <a class="post-link" href="{{ post.url | relative_url }}">
+          {{ post.title | escape }}
+        </a>
+      </h3>
+      {%- if site.show_excerpts -%}
+        {{ post.excerpt }}
+      {%- endif -%}
+    </li>
+    {%- endfor -%}
+  </ul>

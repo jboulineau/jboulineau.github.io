@@ -28,6 +28,26 @@ theme: minima
 plugins:
   - jekyll-feed
 
+# Allow pages to live in their own directory
+include: ["_pages"]
+
+show_excerpts: true
+
+collections:
+  posts:
+    output: true
+    permalink: "/blog/:categories/:title"
+  category:
+    output: true
+  
+  defaults:
+  -
+    scope:
+      path: "" # change to scope the values to a folder
+    values:
+      author: "Jon Boulineau"
+      excerpt_separator: <!--more-->
+
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.

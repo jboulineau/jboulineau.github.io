@@ -1,21 +1,14 @@
 ---
 layout: post
 title: "Intro to Data Streaming: A Simple Real-Time App"
-date:  2017-12-17 20:00:00 
-categories: "Data Architecture"
-permalink: "/blog/a_simple_real-time_app"
+date:  2017-12-17 20:00:00 -0600
+series: "Intro to Data Streaming"
+categories: "Architecture"
 ---
 
-**Intro to Data Streaming Series**
-1. [The Problem with Batch ETL, Part 1](/blog/the_problem_with_batch_etl_part_1)
-2. [The Problem with Batch ETL, Part 2](/blog/the_problem_with_batch_etl_part_2)
-3. [A Simple Real-Time ETL Application](/blog/a_simple_real-time_app)
-4. [Improving the Real-Time ETL Application]()
-5. [Lambda Architecture]()
-6. [Kappa Architecture]()
-7. [Learning Resources](/blog/streaming_learning_resources)
+To illustrate the principles of data streaming, it's helpful to start simple by envisioning what a simple application that would achieve real-time ETL capabilities would look like. <!--more--> But first a review. 
 
-To refresh from parts [1](/blog/the_problem_with_batch_etl_part_1/) and [2](/blog/the_problem_with_batch_etl_part_2/), the shortcomings of batch ETL include:
+To refresh from parts [1]({% post_url 2017-06-08-the_problem_with_batch_etl_part_1 %}) and [2]({% post_url 2017-08-08-the_problem_with_batch_etl_part_2 %}), the shortcomings of batch ETL include:
 
 + **Catastrophic failure**: Because we are dealing with many hours worth of data in batch loads, a failure due to a single record out of millions can cause long-running jobs to fail completely, resulting in long recovery times.
 + **Tool Complexity**: Limitations of traditional ETL tools often lead to hundreds or thousands of packages and stored procedures with little attention to standard development principles like code reuse.
@@ -104,17 +97,17 @@ So, let's begin to improve this solution to solve some of these problems. Introd
 +-------------+  +-------------+
 </pre>
 
-Having one or more change-data-capture databases is one way to introduce the capability. [SQL Server](http://bit.ly/2l5ACNl) provides this functionality as a standard feature and it is available for other RDBMS's. RDBMS CDC automagically stores a snapshot of all changes to tables, along with a timestamp of when the change occurred. This is an excellent way of adding this capability for legacy or COTS/ISV applications that cannot, or will not, be modified to publish messages. 
+Having one or more change-data-capture databases is one way to introduce the capability. [SQL Server](http://bit.ly/2l5ACNl) provides this functionality as a standard feature and it is available for other RDBMS's. RDBMS CDC automagically stores a snapshot of all changes to tables, along with a timestamp of when the change occurred. This is an excellent (and inherently complex), way of adding this capability for legacy or COTS/ISV applications that cannot, or will not, be modified to publish messages. 
 
 For applications developed for modern architectures, a message queue allows for applications to generate messages or events for consumption by other applications. This is an increasingly heavily used application integration pattern for multiple reasons, but primarily because it allows for decoupling. Because applications now communicate through an intermediary you can more easily change, or even replace, applications without impacting others. The changing application now only has to ensure it maintains the contract of the message queue and all consuming applications remain functional. 
 
 With this architectural change, we've accomplished quite a bit:
 
-+ **Temporal Inaccuracies**: We now have access to event time since CDC timestamps changes as do message queues. 
++ **Temporal Inaccuracies, Lossy**: We now have access to event time since CDC timestamps changes as do message queues. We can now use event time to integrate data across applications rather than processing time, thus greatly improving accuracy. We are also capturing all changes to data, not just taking a snapshot. 
 + **Distributed MicroServices, Polyglot Persistence, Event-Driven Architecture**: In this architecture we are now down a revolutionary path. We are, as data engineers, moving towards no longer being in the position of cobbling together data as an afterthought (the classic challenge of ETL and BI), but rather participate as first class citizens in *application architecure.* Reading data from a message queue to which applications are publishing their data, just like any other application, allows us to avoid the pain of trying to extract all this data from variant data stores and dozens of services. It also means that our analytics temporal capabilities are on par with application capabilities because we are able to consume events at the same time as those applications. We are closing the divide. We don't care which persistency store is used, nor how many services there are, because we simply have to interact with a well-defined set of queues, a single protocol, and a single format (most commonly JSON).
 
-We're part of the way there, but we're not done yet. In the next post we'll try to solve the thorny issues of **statefull algorithms** and **reprocessing**.
+We're part of the way there, but we're not done yet. In the next post we'll try to solve the thorny issues of **stateful algorithms** and **reprocessing**.
 
 ---
 
-1 - If you're here, you're really interested in the answer to the temporal inaccuracies question. The reason why temporal inaccuracies are worse in a microbatch scenario is that you're now running ETL during times of day when transactional applications are most volatile. Because we're usually working with processing time and not event time (unless you're lucky enough to have data sources that track event time), we're still relating data based on the time it is extracted, not the time it is inserted/updated (which is still not necessarily accurate, but that's a story for another post).
+1 - If you're here, you're really interested in the answer to the temporal inaccuracies question. The reason why temporal inaccuracies are worse in a micro-batch scenario is that you're now running ETL during times of day when transactional applications are most volatile. Because we're usually working with processing time and not event time (unless you're lucky enough to have data sources that track event time), we're still relating data based on the time it is extracted, not the time it is inserted/updated (which is still not necessarily accurate, but that's a story for another post).
