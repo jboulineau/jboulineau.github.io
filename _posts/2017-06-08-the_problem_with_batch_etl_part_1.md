@@ -36,7 +36,6 @@ Consider this scenario:
 
 This example may or may not be a serious issue in your organization, but consider that this is only one example of a pattern endemic to batch ETL. The pattern is likely repeating throughout the data upon which your Business Intelligence is based in proportion to how often your data changes. If your organization is still able to maintain very consistent windows for batch processing during which very little changes, then you may be in the clear. But, as more and more businesses become 24/7 operations, this problem will only grow, threatening trust in your reporting and analytics accuracy. Combined with the 'Lossy' nature of batch ETL, data accuracy could be a non-trivial issue.  
 
-
 Part 2 of this series will continue to look at the limitations of batch ETL in the context of modern application architectures. 
 
 ---

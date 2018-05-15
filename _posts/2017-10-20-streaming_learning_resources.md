@@ -1,7 +1,7 @@
 ---  
 layout: post
 title: "Intro to Data Streaming: Learning Resources"
-date: 2017-10-20 20:00:00 -0700
+date: 2017-10-20 20:00:00 -0600
 categories: "Architecture"
 ---
 
