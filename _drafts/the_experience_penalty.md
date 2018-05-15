@@ -3,4 +3,7 @@ layout: post
 title: "The Experience Penalty"
 ---
 
-Test
+Impostor syndrome
+
+I found a bug vs I found the bug
+

@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "Intro to Data Streaming: A Simple Real-Time App"
-date:  2017-12-17 20:00:00 
+date:  2017-12-17 20:00:00 -0600
+series: "Intro to Data Streaming"
 categories: "Architecture"
 ---
 
@@ -110,7 +111,3 @@ We're part of the way there, but we're not done yet. In the next post we'll try 
 ---
 
 1 - If you're here, you're really interested in the answer to the temporal inaccuracies question. The reason why temporal inaccuracies are worse in a micro-batch scenario is that you're now running ETL during times of day when transactional applications are most volatile. Because we're usually working with processing time and not event time (unless you're lucky enough to have data sources that track event time), we're still relating data based on the time it is extracted, not the time it is inserted/updated (which is still not necessarily accurate, but that's a story for another post).
-
----
-
-{% include TOC_intro_data_streaming.md %}

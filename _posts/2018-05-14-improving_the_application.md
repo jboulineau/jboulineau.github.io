@@ -2,6 +2,7 @@
 layout: post
 title: "Intro to Data Streaming: Improving the Application"
 date: 2018-05-14 21:20:00 -0600
+series: "Intro to Data Streaming"
 categories: "Architecture"
 ---
 
@@ -81,7 +82,3 @@ You might be thinking at this point, "this is a lot more complicated than the ET
 > Everything should be made as simple as possible, but not simpler.
 
 ETL is by it's very nature complex due to the variance of data sources, hardware limitations, tool limitations, and the sheer number of things that could happen that are outside of your control, but can still break your code. Adding in real-time challenges and the demands of modern analytic methods adds many different dimensions. So the question 'is it simple' will always yield 'No.' The real question is, 'is it as simple as possible, given the requirements of the system?' Fortunately, reference architectures exist to help us reason about how we might implement an as-simple-as-possible system. The remaining posts in this series will focus on two of these: the Lambda Architecture and the Kappa Architecture.
-
----
-
-{%- include TOC_intro_data_streaming.md -%}

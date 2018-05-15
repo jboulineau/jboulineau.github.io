@@ -2,6 +2,7 @@
 layout: post
 title: "Intro to Data Streaming: Learning Resources"
 date: 2017-10-20 20:00:00 -0600
+series: "Intro to Data Streaming"
 categories: "Architecture"
 ---
 
@@ -36,7 +37,3 @@ Jay Kreps' response to Marz is becoming as influential as his 'The Log' post. In
 [The World Beyond Batch: Streaming 102](https://www.oreilly.com/ideas/the-world-beyond-batch-streaming-102)  
 
 Tyler Akidau works on the Google Millwheel team. In these O'Reilly (another great resource) posts he expounds upon streaming from a different perspective from the above. He writes about computational matters, especially various aspects of dealing with time. This is a very good view into how streaming architecture not only reaches parity with batch, but surpasses it in capabilities. Reading the [Millwheel VLDB paper](https://research.google.com/pubs/pub41378.html), if you're up for it, is a deep dive.
-
----
-
-{% include TOC_intro_data_streaming.md %}
