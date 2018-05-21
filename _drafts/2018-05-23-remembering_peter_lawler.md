@@ -9,7 +9,7 @@ One year ago today a great man died. To mark the day I'm re-posting what I wrote
 
 ---
 
-<p><center><img src="/assets/images/peter_lawler.jpg" alt="" ></center></p>
+<p><center><img src="/assets/images/peter_lawler.jpg" alt="Peter Lawler" ></center></p>
 
 _Originally published May 24th, 2017_
 
