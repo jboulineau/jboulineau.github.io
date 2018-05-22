@@ -4,7 +4,7 @@ title: "Intro to Data Streaming: Lambda Architecture"
 date: 2018-05-21
 series: "Intro to Data Streaming"
 categories: "Architecture"
-excerpt: "Through the first parts in this series we have covered problems with batch ETL processes and conceptually designed a real-time data processing system. In this post the series shifts to looking at reference architectures that have been successfully used to implement real-time data streaming solutions. The first of these is known as the Lambda Architecture. The next part of the series will cover the Kappa Architecture."
+excerpt: "Through the first parts in this series we have covered problems with batch ETL processes and conceptually designed a real-time data processing system. In this post the series shifts to looking at reference architectures that have been successfully used to implement real-time data streaming solutions. The first of these is known as the Lambda Architecture."
 ---
 
 <!--
@@ -34,6 +34,4 @@ The Lambda Architecture has been implemented with success many times. And this i
 &nbsp;
 1. The term _Lambda_, refers to the computer science concept of [anonymous functions](https://en.wikipedia.org/wiki/Anonymous_function) that emerges from [Lambda calculus](https://en.wikipedia.org/wiki/Lambda_calculus). In this context, the fundamental principle of the architecture is to apply arbitrary functions to the data regardless of the layer of processing operations.
 
-http://jameskinley.tumblr.com/post/37398560534/the-lambda-architecture-principles-for
 
-https://jvns.ca/blog/2016/11/19/a-critique-of-the-cap-theorem/
