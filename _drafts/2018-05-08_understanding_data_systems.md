@@ -14,3 +14,5 @@ https://www.datastax.com/dev/blog/understanding-hinted-handoff
 eventually-known consistency
 
 vector clocks / Lamport clock
+
+https://jvns.ca/blog/2016/11/19/a-critique-of-the-cap-theorem/
