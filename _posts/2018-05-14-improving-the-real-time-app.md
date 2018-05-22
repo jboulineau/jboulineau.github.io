@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "Intro to Data Streaming: Improving the Application"
+title: "Improving the Real-Time App"
 date: 2018-05-14 21:20:00 -0600
 series: "Intro to Data Streaming"
 categories: "Architecture"
 ---
 
-In the [last post]({% post_url 2017-10-17-a_simple_real-time_app %}) we considered an application architecture that would start to achieve real-time ETL requirements, but there were issues remaining with the design. In this post, we will improve the design to further improve upon batch processing and understand the data streaming pattern. <!--more-->
+In the [last post]({% post_url 2017-10-17-a-simple-real-time-app %}) we considered an application architecture that would start to achieve real-time ETL requirements, but there were issues remaining with the design. In this post, we will improve the design to further improve upon batch processing and understand the data streaming pattern. <!--more-->
 
 Here's where our system design stands as of the last post:
 

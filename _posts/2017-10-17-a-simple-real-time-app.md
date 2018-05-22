@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Intro to Data Streaming: A Simple Real-Time App"
+title: "A Simple Real-Time App"
 date:  2017-12-17 20:00:00 -0600
 series: "Intro to Data Streaming"
 categories: "Architecture"
@@ -8,7 +8,7 @@ categories: "Architecture"
 
 To illustrate the principles of data streaming, it's helpful to start simple by envisioning what a simple application that would achieve real-time ETL capabilities would look like. <!--more--> But first a review. 
 
-To refresh from parts [1]({% post_url 2017-06-08-the_problem_with_batch_etl_part_1 %}) and [2]({% post_url 2017-08-08-the_problem_with_batch_etl_part_2 %}), the shortcomings of batch ETL include:
+To refresh from parts [1]({% post_url 2017-06-08-the-problem-with-batch-etl-part-1 %}) and [2]({% post_url 2017-08-08-the-problem-with-batch-etl-part-2 %}), the shortcomings of batch ETL include:
 
 + **Catastrophic failure**: Because we are dealing with many hours worth of data in batch loads, a failure due to a single record out of millions can cause long-running jobs to fail completely, resulting in long recovery times.
 + **Tool Complexity**: Limitations of traditional ETL tools often lead to hundreds or thousands of packages and stored procedures with little attention to standard development principles like code reuse.

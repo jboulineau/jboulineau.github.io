@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Concurrency in PowerShell: Multi-Threading with Runspaces"
+title: "Multi-Threading with Runspaces"
 date: 2012-05-22
 series: "Concurrency in PowerShell"
 categories: "PowerShell"

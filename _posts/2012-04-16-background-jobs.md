@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Concurrency in PowerShell: Background Jobs"
+title: "Background Jobs"
 date: 2012-04-16
 series: "Concurrency in PowerShell"
 categories: "PowerShell"

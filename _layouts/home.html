@@ -19,8 +19,12 @@ layout: default
         <h3>
           <a class="post-link" href="{{ post.url | relative_url }}">
             {{ post.title | escape }}
+            </p>
           </a>
         </h3>
+        {% if post.series %}
+              <p><i>Part of the {{ post.series }} series.</i> </p>
+            {% endif %}
         {%- if site.show_excerpts -%}
           {{ post.excerpt }}
         {%- endif -%}

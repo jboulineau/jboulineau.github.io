@@ -1,6 +1,6 @@
 ---  
 layout: post
-title: "Intro to Data Streaming: Learning Resources"
+title: "Data Streaming Learning Resources"
 date: 2017-10-20 20:00:00 -0600
 series: "Intro to Data Streaming"
 categories: "Architecture"
@@ -9,7 +9,7 @@ categories: "Architecture"
 
 During a presentation at the [Nashville BI user group](https://www.meetup.com/NashBI/), I was asked to provide more material on getting started with data streaming. I'll cover some of these in other 'Intro to Data Streaming' posts, but I promised the group a blog post on the subject, and here it is. There is a ton of material out there, but it will get you started. <!--more--> 
 
-Also for the attendees of the meeting, here is the [deck I used](https://rivuletio.files.wordpress.com/2017/10/real_time_etl.pptx).
+Also for the attendees of the meeting, here is the <a href="/assets/presentations/real_time_etl.pptx">deck I used</a>.
 
 [The Log: What every software engineer should know about real-time data's unifying abstraction](https://goo.gl/j6mqP6)  
 
