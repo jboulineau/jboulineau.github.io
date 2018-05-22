@@ -29,7 +29,7 @@ plugins:
   - jekyll-feed
 
 # Allow pages to live in their own directory
-include: ["_pages","_category"]
+include: ["_pages"]
 
 show_excerpts: true
 
