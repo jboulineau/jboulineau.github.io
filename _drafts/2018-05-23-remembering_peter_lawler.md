@@ -1,14 +1,12 @@
 ---
 layout: post
 title: "Remembering Peter Lawler"
-date: 2018-05-23 
+#date: 2018-05-23 
 categories: "Personal"
 excerpt: "One year ago today a great man died. To mark the day I'm re-posting what I wrote at the time in memoriam Peter Augustine Lawler."
 ---
 
-One year ago today a great man died. To mark the day I'm re-posting what I wrote at the time in memoriam Peter Augustine Lawler.
-
----
+&nbsp;
 
 <p><center><img src="/assets/images/peter_lawler.jpg" alt="Peter Lawler" ></center></p>
 
