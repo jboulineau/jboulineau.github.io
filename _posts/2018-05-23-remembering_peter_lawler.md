@@ -10,6 +10,8 @@ excerpt: "One year ago today a great man died. To mark the day I'm re-posting wh
 
 <p><center><img src="/assets/images/peter_lawler.jpg" alt="Peter Lawler" ></center></p>
 
+> "One year ago today a great man died. To mark the day I'm re-posting what I wrote at the time in memoriam Peter Augustine Lawler." 
+
 _Originally published May 24th, 2017_
 
 I've spent much of the last two days reading (and re-reading) various eulogies of Peter Augustine Lawler from his friends and colleagues. Many have been touching, most have been accurate, one missed the point completely, and none have been sufficient. I was not Dr. Lawler's friend and certainly not his colleague, though there was a long period in my life that I hoped to be both. It's only now that I realize that being his student may have been the much greater and more rewarding privilege. For it is true that he possessed a brilliant mind that was influential to colleagues, and it is true that he was a compassionate man who cared for his friends. Yet, he was more.  
