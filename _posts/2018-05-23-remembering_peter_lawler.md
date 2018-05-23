@@ -10,7 +10,7 @@ excerpt: "One year ago today a great man died. To mark the day I'm re-posting wh
 
 <p><center><img src="/assets/images/peter_lawler.jpg" alt="Peter Lawler" ></center></p>
 
-> "One year ago today a great man died. To mark the day I'm re-posting what I wrote at the time in memoriam Peter Augustine Lawler." 
+> One year ago today a great man died. To mark the day I'm re-posting what I wrote at the time in memoriam Peter Augustine Lawler. 
 
 _Originally published May 24th, 2017_
 
