@@ -7,6 +7,8 @@ categories: "PowerShell"
 excerpt: "There are multiple methods to achieve concurrency in PowerShell. This post covers Multi-Threading with Runspaces"
 ---
 
+> As the most popular series of posts on my old blog, which also exists as documentation for one of my [github projects](https://github.com/jboulineau/psasync) I thought I'd republish here.
+
 Download the code for this post <a href="/assets/code/runspaces.zip">here</a>.
 
 In my last post I looked at using background jobs to execute PowerShell code concurrently, concluding that for many tasks the large amount of overhead makes this method counter productive. Fortunately, there is a better way. What I present here is an expansion on the work of Oisin Grehan ( [B](http://www.nivot.org/) - [T](http://www.twitter.com/oising)), who deserves the credit for introducing this method. This blog post introduced me to the concepts upon which I expound in [this post](http://www.nivot.org/nivot2/post/2009/01/22/CTP3TheRunspaceFactoryAndPowerShellAccelerators.aspx).
