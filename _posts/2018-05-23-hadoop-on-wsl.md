@@ -2,6 +2,7 @@
 layout: post
 title: "Running Hadoop on WSL"
 date: 2018-05-23
+categories: "Hadoop"
 excerpt: "I was curious if it was possible to get Hadoop running under Windows Subsystem for Linux. It is."
 ---
 
