@@ -32,7 +32,7 @@ plugins:
 include: ["_pages"]
 
 show_excerpts: true
-google_analytics: true
+google_analytics: UA-119863213-1
 
 collections:
   posts:
