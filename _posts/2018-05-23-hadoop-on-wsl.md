@@ -34,7 +34,7 @@ That will show you something like:
 /usr/lib/jvm/java-8-oracle/jre/bin/java
 ```
 
-So, for me, JAVA_HOME should be set to `/usr/lib/jvm/java-8-oracle/` in `etc/hadoop-env.sh`.
+So, for me, JAVA_HOME should be set to `/usr/lib/jvm/java-8-oracle/` in `etc/hadoop/hadoop-env.sh`.
 
 ## SSH issues
 
