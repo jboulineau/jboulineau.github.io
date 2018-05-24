@@ -15,7 +15,7 @@ Installing WSL is as easy as going through the Windows store and selecting the d
 You'll be spending some time in Vi, so let's make that useable to. Add the following line to ~/.vimrc, or else you'll be squinting at an illegible dark blue on black color scheme:
 
 ```bash
-set background-dark
+set background=dark
 ```
 
 Now, let's get to what I discovered. Below I'm taking the approach of filling in the gaps of the 'Getting Started' doc. Reading this post first should (hopefully) get you over the hurdles you'll run into while you're following the doc. 
