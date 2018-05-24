@@ -3,11 +3,19 @@ layout: post
 title: "Getting Started with Hadoop"
 ---
 
+<!-- TODO
+
+Write a script to automate
+
+-->
+
 ### Installation
 
 Following along with the instructions on the [official Hadoop site](https://hadoop.apache.org) is pretty good, but you may run into some of the same questions and issues when I first started. The goal of this post is to help you avoid some of the same frustrations I had.
 
+
 IF run without configuration, the HDFS filesystem will be added to /tmp/hadoop-{username}/dfs/name
+
 
 ERROR: Attempting to operate on hdfs namenode as root
 ERROR: but there is no HDFS_NAMENODE_USER defined. Aborting operation.
@@ -18,7 +26,14 @@ ERROR: JAVA_HOME is not set and could not be found.
 
 # Resolution: add to hadoop-env.sh
 
+export HDFS_DATANODE_USER=root
+export HADOOP_SECURE_DN_USER=hdfs 
+export HDFS_NAMENODE_USER=root 
+export HDFS_SECONDARYNAMENODE_USER=root
+
 sudo mkdir /home/hdfs
+
+Set permissions on HADOOP_HOME for hdfs:hdfs
 
 Problem: pdsh@surface-ubuntu: localhost: connect: Connection refused
 Solution: export PDSH_RCMD_TYPE=ssh to hadoop-env.sh
@@ -82,8 +97,3 @@ Look in the log:
 
 
 
-<!-- TODO
-
-Write a script to automate
-
--->
