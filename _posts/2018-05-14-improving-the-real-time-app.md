@@ -2,6 +2,7 @@
 layout: post
 title: "Improving the Real-Time App"
 date: 2018-05-14 21:20:00 -0600
+updated: 2018-05-29
 series: "Intro to Data Streaming"
 categories: "Architecture"
 ---
@@ -71,7 +72,7 @@ We also have the problem of not being able to implement efficient stateful algor
 +-------------+  +-------------+
 </pre>
 
-First, let's replace the message queue with a persistent event store. By simply keeping the messages available we can remove the necessity of a separate staging area in addition to the message queue. Of course, this can't just be a database. The same capabilities of the message queue must exist as a subset of the capabilities of this store. We must be able to utilize the pub/sub pattern and provide the same semantics such as at-most-once message delivery. Persisting data rather than removing them after they have been consumed enables us to simply start from the beginning, or a set point-in-time, in order to reprocess data. 
+First, let's replace the message queue with a persistent event store. By simply keeping the messages available we can remove the necessity of a separate staging area in addition to the message queue. Of course, this can't just be a database. The same capabilities of the message queue must exist as a subset of the capabilities of this store. We must be able to utilize the pub/sub pattern and provide the same semantics such as at-most-once message delivery. Persisting data rather than removing them after they have been consumed enables us to simply start from the beginning, or a set point-in-time, in order to reprocess data. This is the foundation of the architectural pattern known as [Event Sourcing](https://martinfowler.com/eaaDev/EventSourcing.html).
 
 Second, we need to add a local cache for the ETL app to allow implementing stateful algorithms. Ideally this will be an in-memory store for performance reasons. While it could be a disk-based data store that is on the same hardware as the ETL app, the farther we get away from memory-resident data the worse off we are going to be. As the ETL app processes new data it can store data it needs to have available for processing future messages. This will typically be a small subset of the data that are persisted in the EDW. Now, our app can perform calculations as simple as running averages or as complex as fraud detection. 
 

@@ -11,7 +11,7 @@ During a presentation at the [Nashville BI user group](https://www.meetup.com/Na
 
 Also for the attendees of the meeting, here is the <a href="/assets/presentations/real_time_etl.pptx">deck I used</a>.
 
-[The Log: What every software engineer should know about real-time data's unifying abstraction](https://goo.gl/j6mqP6)  
+[The Log: What every software engineer should know about real-time data's unifying abstraction](https://engineering.linkedin.com/distributed-systems/log-what-every-software-engineer-should-know-about-real-time-datas-unifying)  
 
 For many, Jay Kreps' article started it all. Jay, of Linkedin at the time, is the driving force behind Kafka and his critical insight that the ordered, immutable, transaction log can form the conceptual foundation of a data architecture has inspired many to rethink how we build systems and integrate applications. Understanding the principles here is, in my opinion, the best place to start. For a more comprehensive view of the subject, you can also read the [I Heart Logs](https://www.confluent.io/ebook/i-heart-logs-event-data-stream-processing-and-data-integration/) e-book. Jay is now the CEO of Confluent, and speaking of Confluent ...  
 
