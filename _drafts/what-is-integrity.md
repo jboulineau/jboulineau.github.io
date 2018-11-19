@@ -15,6 +15,6 @@ Obligatory 'the [Dictionary.com](http://www.dictionary.com/browse/integrity) def
 >2. the state of being whole, entire, or undiminished: to preserve the integrity of the empire.
 >3. a sound, unimpaired, or perfect condition: the integrity of a ship's hull.
 
-And we all nod. But, what does it mean **_really_**? Itegrity is defined by the characteristics that, without which, we would no longer be who we are. Or, perhaps, who we are supposed to be.
+And we all nod. But, what does it mean **_really_**? Integrity is defined by the characteristics that, without which, we would no longer be who we are. Or, perhaps, who we are supposed to be.
 
-So, here's what I'm struggling with now. What are the unchangable principles on which I stand, regardless of the cost? For what will I sacrifice everything? Until I know that, can I claim that I have integrity? I conclude the answer is 'no.'
+So, here's what I'm struggling with now. What are the immutable principles on which I stand, regardless of the cost? For what will I sacrifice everything? Until I know that, can I claim that I have integrity? I conclude the answer is 'no.'
