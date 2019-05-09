@@ -36,17 +36,29 @@ That will show you something like:
 
 So, for me, JAVA_HOME should be set to `/usr/lib/jvm/java-8-oracle/` in `etc/hadoop/hadoop-env.sh`.
 
+Although Hadoop is intended to run on Java 8, that version is getting a little long-in-the-tooth. It is possible to run Hadoop with newer versions of Java, but you will likely run into the following error when loading the administrative site.
+
+``` bash
+Failed to retrieve data from /webhdfs/v1/?op=LISTSTATUS: Server Error
+```
+
+As described in this [StackOverflow thread](https://stackoverflow.com/questions/48735869/error-failed-to-retrieve-data-from-webhdfs-v1-op-liststatus-server-error-wh), this is due to deprecated dependency and can be solved by adding the following line to `hadoop-env.sh`.
+
+``` bash
+export HADOOP_OPTS="--add-modules java.activation"
+```
+
 ## SSH issues
 
 Attempting to connect to localhost via ssh was the only problem I ended up running into. When doing so, I got:
 
-```
+``` bash
 Connection closed by 127.0.0.1 port 22
 ```
 
-It turned out, the necessary keys for sshd to function properly are not automagically generated in WSL (I think). I'm sure you could go through and generate them yourself, but I found it easier just to reinstall  openssh-server. 
+It turned out, the necessary keys for sshd to function properly are not automagically generated in WSL (I think). I'm sure you could go through and generate them yourself, but I found it easier just to reinstall openssh-server.
 
-```bash
+``` bash
 sudo apt purge openssh-server
 sudo apt install openssh-server
 sudo service ssh start
@@ -54,9 +66,11 @@ sudo service ssh start
 
 And that's it. If you do the above and then follow along with the 'Getting Started' doc, you should be good to go. 
 
-One more lesson learned.  When running `start-dfs.sh` at one point I got the following error:
+### Issues Starting Hadoop
 
-```bash
+When running `start-dfs.sh` at one point I got the following error:
+
+``` bash
 Starting namenodes on [localhost]
 localhost: jon@localhost: Permission denied (publickey,password).
 Starting datanodes
@@ -67,6 +81,6 @@ JON-PC: jon@jon-pc: Permission denied (publickey,password).
 
 I had deviated from the instructions by adding a password to my ssh key (for added securities!). That was not good for Hadoop. There MUST be a way to start Hadoop with a password protected key, but I haven't researched that yet. It was easy enough to correct by running the following to remove the password.
 
-```bash
+``` bash
 ssh-keygen -p
 ```
