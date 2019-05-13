@@ -1,7 +1,7 @@
 ---
 layout: post  
 title: "What I Learned About Leadership"  
-date: 
+date: 1900-01-01  
 categories: "Leadership"  
 excerpt:  
 ---
