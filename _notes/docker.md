@@ -10,3 +10,4 @@ ContainerExecutor abstraction
     * Deprecated in favor of the 'ContainerRuntime' abstraction
 - LinuxContainerExecutor extended to include 'type' concept that allowed the execution of the ContainerRuntime type
 
+https://github.com/docker/for-win/issues/522
