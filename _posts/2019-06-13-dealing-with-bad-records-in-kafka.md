@@ -67,6 +67,7 @@ while (true) {
                 System.out.println("This record is not a `Payment` event.");
             }
         }
+        consumer.commitSync();
     }
 
 ```
