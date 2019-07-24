@@ -1,19 +1,32 @@
 # kafka
 
-https://kafka.apache.org/20/javadoc/org/apache/kafka/clients/consumer/KafkaConsumer.html
+format filesystem with XFS
+use /kafka path for zookeeper
+modify file handle limits
 
-## Avro error
-https://stackoverflow.com/questions/53715265/kafka-avro-serializer-and-deserializer-exception-avro-supported-types
+yahoo kafka manager
 
-Also, has to implement SingleRecord or GenericRecord.
+https://github.com/confluentinc/schema-registry/issues/868
 
-## Dealing with bad records
+## event sourcing
 
-https://issues.apache.org/jira/browse/KAFKA-4740
+- partition modification throws off key-based allocation
+- multiple message types per topic isn't widely supported
+  - https://github.com/confluentinc/ksql/issues/1267
+- topic alignment hotspots
 
-https://stackoverflow.com/questions/49297926/how-to-best-handle-serializationexception-from-kafkaconsumer-poll-method
+## Optimizations
 
-https://msayag.github.io/Kafka/
+- export KAFKA_HEAP_OPTS="-Xmx4g"
+- disable RAM swap
+  - sudo sysctl vm.swappiness=1
+  - echo 'vm.swappiness=1' | sudo tee --append /etc/sysctl.conf
 
-If you use GenericRecord, you have to worry about handling deserialization yourself.
+- monitor GC
+- increase file descriptor limits to at least 100k
 
+- set Kafka quotas?
+- st1 EBS volumes
+
+offsets.retention.minutes
+unclean.leader.elections.enable
