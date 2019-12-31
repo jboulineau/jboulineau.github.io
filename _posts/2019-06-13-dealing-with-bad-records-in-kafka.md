@@ -2,7 +2,7 @@
 layout: post
 title: "Dealing With Bad Records in Kafka"
 date: 2019-06-13
-categories: kafka
+categories: Kafka
 excerpt: A single bad record (a.k.a poison pill) on a Kafka topic can ruin your day. KafkaConsumer does not deal with these records gracefully. Here I cover strategies on how to address this issue.
 ---
 

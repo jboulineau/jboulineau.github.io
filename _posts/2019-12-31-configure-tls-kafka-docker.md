@@ -2,7 +2,7 @@
 layout: post
 title: "TLS/SSL for Kafka in Docker Containers"
 date: 2019-12-31
-categories: kafka
+categories: Kafka
 excerpt: While configuring TLS/SSL for Confluent Kafka is straightforward, there are twists when running in Docker containers. This posts covers what I discovered that isn't (as of time of writing) covered in the official documentation.
 ---
 
