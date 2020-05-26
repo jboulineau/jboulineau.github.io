@@ -23,3 +23,7 @@ Make sure region is set properly
 
 Create EKS cluster
   - Create IAM EKS Cluster role
+
+https://github.com/Nike-Inc/gimme-aws-creds
+
+https://aws.amazon.com/blogs/networking-and-content-delivery/using-static-ip-addresses-for-application-load-balancers/

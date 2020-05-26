@@ -93,3 +93,14 @@ NOTE: https://github.com/openssl/openssl/issues/6289
 
 Add CA public key to client keystore --
 keytool -keystore kafka.client.truststore.jks -alias CARoot -import -file ca-cert -storepass $PASS -keypass $PASS -noprompt
+
+## Scaling
+
+https://engineeringblog.yelp.com/2020/01/streams-and-monk-how-yelp-approaches-kafka-in-2020.html
+
+https://www.waitingforcode.com/apache-kafka/apache-kafka-idempotent-producer/read
+http://cloudurable.com/blog/kafka-tutorial-kafka-producer-advanced-java-examples/index.html
+
+## Endpoint identification validation
+
+https://issues.apache.org/jira/browse/KAFKA-7376
