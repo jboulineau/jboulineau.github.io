@@ -4,7 +4,7 @@ title: About
 permalink: "/about/"
 ---
 
-I am a data engineer, data architect, and IT leader currently living and working in the Nashville, TN area.
+I am an architect, software engineer, and IT leader currently living and working in the Nashville, TN area.
 
 Blogging helps me learn. I firmly believe that you don't truly understand something until you can teach it to someone else. Writing is the most challenging sort of teaching since you only get one shot at an explanation and you can't adapt your message to your audience on-the-fly. It challenges me to be as clear as possible in my explanations, which also helps clarity of understanding.
 
